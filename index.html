@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <title>Hindi Voice Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>Hindi Voice Generator</h2>
+
+  <textarea id="text" placeholder="Yahan Hindi text likhiye..."></textarea>
+
+  <div class="voices">
+    <button onclick="setVoice('kamal')">Kamal (Male)</button>
+    <button onclick="setVoice('abhimanyu')">Abhimanyu (Male)</button>
+    <button onclick="setVoice('dipshikha')">Dipshikha (Female)</button>
+    <button onclick="setVoice('myna')">Myna (Female)</button>
+  </div>
+
+  <label>Speed</label>
+  <input type="range" id="rate" min="0.5" max="2" step="0.1" value="1">
+
+  <label>Pitch</label>
+  <input type="range" id="pitch" min="0" max="2" step="0.1" value="1">
+
+  <div class="modes">
+    <button onclick="setMode('news')">News</button>
+    <button onclick="setMode('story')">Story</button>
+    <button onclick="setMode('emotion')">Emotional</button>
+  </div>
+
+  <button class="play" onclick="speak()">Play Voice</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
